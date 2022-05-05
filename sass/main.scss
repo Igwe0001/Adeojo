@@ -1,0 +1,10 @@
+@use "variables" as *;
+@use "generalStyles" as *;
+@use "header" as *;
+@use "breakPoints" as *;
+
+body {
+  background-color: $Background-color;
+  transition: .5s;
+  position: relative;
+}

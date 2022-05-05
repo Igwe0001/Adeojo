@@ -1,0 +1,229 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  scrollbar-width: thin;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+header {
+  height: 5rem;
+  position: relative;
+}
+header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+header span {
+  font-size: 2.4rem;
+  font-family: "Mali", cursive;
+  color: #FF4500;
+}
+@media (min-width: 720px) {
+  header span {
+    font-size: 3.5rem;
+  }
+}
+header .hamburger {
+  display: inline-block;
+}
+header .hamburger .line {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #FF4500;
+  margin: 0.8rem 0;
+}
+header .hamburger .line i {
+  font-size: 0.5rem;
+}
+@media (min-width: 720px) {
+  header .hamburger {
+    display: none;
+  }
+}
+@media (min-width: 480px) {
+  header {
+    height: 10rem;
+  }
+}
+
+nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #FF4500;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+nav .close {
+  display: inline-block;
+  margin: 1.1rem auto;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  color: #DBF2FF;
+}
+@media (min-width: 720px) {
+  nav .close {
+    display: none;
+  }
+}
+nav .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80%;
+}
+@media (min-width: 720px) {
+  nav .nav-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+nav ul {
+  height: 40%;
+  width: 100%;
+}
+@media (min-width: 720px) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 1.5rem;
+  }
+}
+nav li {
+  text-align: center;
+  margin: 1rem 0;
+}
+@media (min-width: 720px) {
+  nav li {
+    margin: 0 1rem;
+  }
+}
+nav li a {
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  color: #DBF2FF;
+}
+@media (min-width: 720px) {
+  nav li a {
+    color: #86AEE1;
+    font-family: "Mali", cursive;
+  }
+}
+nav .socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav .socials ul li a {
+  font-size: 1.8rem;
+}
+@media (min-width: 720px) {
+  nav .socials ul li {
+    margin: 0 0.3rem;
+  }
+}
+nav .socials ul i {
+  margin: 0 0.5rem;
+}
+@media (min-width: 720px) {
+  nav {
+    position: initial;
+    height: initial;
+    display: initial;
+    width: initial;
+    background-color: initial;
+  }
+}
+
+body {
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}

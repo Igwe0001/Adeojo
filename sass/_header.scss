@@ -1,0 +1,138 @@
+@use "generalStyles" as *;
+@use "variables" as *;
+@use "breakPoints" as *;
+
+header {
+  height: 5rem;
+  position: relative;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include general;
+  }
+
+  span {
+    font-size: 2.4rem;
+    font-family: $Mali;
+    color: $nav-background;
+
+    @include md {
+      font-size: 3.5rem;
+    }
+  }
+
+  .hamburger {
+    display: inline-block;
+    .line {
+      width: 3rem;
+      height: 0.3rem;
+      background-color: $nav-background;
+      margin: 0.8rem 0;
+
+      i {
+        font-size: 0.5rem;
+      }
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+
+  @include sm {
+    height: 10rem;
+  }
+}
+
+nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $nav-background;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .close {
+    display: inline-block;
+    margin: 1.1rem auto;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    color: $close-color;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  ul {
+    height: 40%;
+    width: 100%;
+
+    @include md {
+      display: flex;
+      margin: 0 1.5rem;
+    }
+  }
+
+  li {
+    text-align: center;
+    margin: 1rem 0;
+
+    @include md {
+      margin: 0 1rem;
+    }
+    a {
+      text-decoration: none;
+      font-size: 3rem;
+      font-family: $Roboto;
+      color: $close-color;
+
+      @include md {
+        color: $media-color;
+        font-family: $Mali;
+      }
+    }
+  }
+
+  .socials ul {
+    display: flex;
+
+    li {
+      a {
+        font-size: 1.8rem;
+      }
+
+      @include md {
+        margin: 0 0.3rem;
+      }
+    }
+    i {
+      margin: 0 0.5rem;
+    }
+  }
+
+  @include md {
+    position: initial;
+    height: initial;
+    display: initial;
+    width: initial;
+    background-color: initial;
+  }
+}
