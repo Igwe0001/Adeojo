@@ -62,8 +62,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  height: 5rem;
   position: relative;
+  width: 100%;
+  height: 9rem;
 }
 header .header-container {
   display: -webkit-box;
@@ -75,155 +76,118 @@ header .header-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  position: relative;
+  width: 95%;
   max-width: 1000px;
   margin: 0 auto;
   height: 100%;
 }
-header span {
-  font-size: 2.4rem;
-  font-family: "Mali", cursive;
-  color: #FF4500;
-}
-@media (min-width: 720px) {
-  header span {
-    font-size: 3.5rem;
-  }
-}
 header .hamburger {
-  display: inline-block;
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  position: relative;
+  cursor: pointer;
 }
-header .hamburger .line {
+header .hamburger .bun {
+  display: block;
   width: 3rem;
-  height: 0.3rem;
-  background-color: #FF4500;
-  margin: 0.8rem 0;
+  height: 3rem;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.8rem;
+  -webkit-transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.15s;
+  transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.15s;
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.15s;
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.15s, -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.15s;
 }
-header .hamburger .line i {
-  font-size: 0.5rem;
+header .hamburger .bun-crust {
+  display: block;
+  width: 3rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 0.3rem;
+  background-color: #000;
+  -webkit-transition: -webkit-transform 0.16s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.15s;
+  transition: -webkit-transform 0.16s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.15s;
+  transition: transform 0.16s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.15s;
+  transition: transform 0.16s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.15s, -webkit-transform 0.16s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.15s;
 }
-@media (min-width: 720px) {
-  header .hamburger {
-    display: none;
-  }
+header .hamburger .bun-crust-top {
+  top: 1.4rem;
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
 }
-@media (min-width: 480px) {
-  header {
-    height: 10rem;
-  }
+header .hamburger .bun-crust-bottom {
+  bottom: 1.4rem;
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
+}
+header h1 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.3rem;
+  font-weight: 400;
 }
 
 nav {
-  height: 100vh;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #FF4500;
-  overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-nav .close {
-  display: inline-block;
-  margin: 1.1rem auto;
-  display: grid;
-  place-items: center;
+  position: absolute;
+  top: 100%;
   width: 100%;
-  color: #DBF2FF;
-}
-@media (min-width: 720px) {
-  nav .close {
-    display: none;
-  }
-}
-nav .nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 80%;
-}
-@media (min-width: 720px) {
-  nav .nav-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+  left: 0;
+  height: 0;
+  background-color: #000;
+  -webkit-transition: all 0.58s ease;
+  transition: all 0.58s ease;
 }
 nav ul {
-  height: 40%;
-  width: 100%;
-}
-@media (min-width: 720px) {
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 1.5rem;
-  }
+  height: 100%;
+  text-align: center;
 }
 nav li {
-  text-align: center;
-  margin: 1rem 0;
+  padding: 1rem 0;
 }
-@media (min-width: 720px) {
-  nav li {
-    margin: 0 1rem;
-  }
-}
-nav li a {
+nav a {
   text-decoration: none;
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
-  color: #DBF2FF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  color: #fff;
 }
-@media (min-width: 720px) {
-  nav li a {
-    color: #86AEE1;
-    font-family: "Mali", cursive;
-  }
+
+.switch {
+  height: 7rem;
 }
-nav .socials ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+.bun-top.toggle {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
-nav .socials ul li a {
-  font-size: 1.8rem;
+
+.bun-bottom.toggle {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
-@media (min-width: 720px) {
-  nav .socials ul li {
-    margin: 0 0.3rem;
-  }
+
+.bun-crust-top.toggle {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
-nav .socials ul i {
-  margin: 0 0.5rem;
-}
-@media (min-width: 720px) {
-  nav {
-    position: initial;
-    height: initial;
-    display: initial;
-    width: initial;
-    background-color: initial;
-  }
+
+.bun-crust-bottom.toggle {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 body {
   background-color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: relative;
+  width: 100%;
+  height: 100%;
 }

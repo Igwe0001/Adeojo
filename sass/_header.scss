@@ -3,136 +3,114 @@
 @use "breakPoints" as *;
 
 header {
-  height: 5rem;
+  // outline: 1px solid red;
   position: relative;
+  width: 100%;
+  height: 9rem;
+
   .header-container {
+    // outline: 1px solid blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     @include general;
   }
 
-  span {
-    font-size: 2.4rem;
-    font-family: $Mali;
-    color: $nav-background;
-
-    @include md {
-      font-size: 3.5rem;
-    }
-  }
-
   .hamburger {
-    display: inline-block;
-    .line {
-      width: 3rem;
-      height: 0.3rem;
-      background-color: $nav-background;
-      margin: 0.8rem 0;
+    // outline: 1px solid green;
+    display: block;
+    width: 4.8rem;
+    height: 4.8rem;
+    position: relative;
+    cursor: pointer;
 
-      i {
-        font-size: 0.5rem;
-      }
+    .bun {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 0.9rem;
+      left: 0.8rem;
+      transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.15s;
     }
 
-    @include md {
-      display: none;
+    .bun-crust {
+      display: block;
+      width: 3rem;
+      height: 0.1rem;
+      position: absolute;
+      left: 0.3rem;
+      background-color: #000;
+      transition: transform 0.16s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.15s;
+    }
+
+    .bun-crust-top {
+      top: 1.4rem;
+      transform: translateY(-0.3rem);
+    }
+
+    .bun-crust-bottom {
+      bottom: 1.4rem;
+      transform: translateY(0.3rem);
     }
   }
 
-  @include sm {
-    height: 10rem;
+  h1 {
+    text-transform: uppercase;
+    font-family: $Mont;
+    font-size: 3.3rem;
+    font-weight: 400;
   }
 }
 
 nav {
-  height: 100vh;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: $nav-background;
-  overflow-x: hidden;
-  transition: 0.5s;
-
-  .close {
-    display: inline-block;
-    margin: 1.1rem auto;
-    display: grid;
-    place-items: center;
-    width: 100%;
-    color: $close-color;
-
-    @include md {
-      display: none;
-    }
-  }
-
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-
-    @include md {
-      flex-direction: row;
-    }
-  }
+  // outline: 1px solid blue;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 0;
+  background-color: $text-color;
+  transition: all .58s ease;
 
   ul {
-    height: 40%;
-    width: 100%;
-
-    @include md {
-      display: flex;
-      margin: 0 1.5rem;
-    }
+    // outline: 1px solid red;
+    height: 100%;
+    text-align: center;
   }
 
   li {
-    text-align: center;
-    margin: 1rem 0;
-
-    @include md {
-      margin: 0 1rem;
-    }
-    a {
-      text-decoration: none;
-      font-size: 3rem;
-      font-family: $Roboto;
-      color: $close-color;
-
-      @include md {
-        color: $media-color;
-        font-family: $Mali;
-      }
-    }
+    // outline: 1px solid green;
+    padding: 1rem 0;
   }
 
-  .socials ul {
-    display: flex;
-
-    li {
-      a {
-        font-size: 1.8rem;
-      }
-
-      @include md {
-        margin: 0 0.3rem;
-      }
-    }
-    i {
-      margin: 0 0.5rem;
-    }
+  a {
+    text-decoration: none;
+    font-family: $Mont;
+    font-size: 1.05rem;
+    color: $text-invert;
   }
+}
 
-  @include md {
-    position: initial;
-    height: initial;
-    display: initial;
-    width: initial;
-    background-color: initial;
-  }
+.switch {
+  height: 7rem;
+}
+
+.bun-top.toggle {
+  transform: rotate(45deg);
+}
+
+.bun-bottom.toggle {
+  transform: rotate(-45deg);
+}
+
+.bun-crust-top.toggle {
+  transform: none;
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}
+
+.bun-crust-bottom.toggle {
+  transform: none;
+  transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
