@@ -71,13 +71,20 @@ nav {
   width: 100%;
   left: 0;
   height: 0;
+  visibility: hidden;
   background-color: $text-color;
   transition: all .58s ease;
+  
+  .nav-container {
+    height: 100%
+  }
 
   ul {
     // outline: 1px solid red;
     height: 100%;
     text-align: center;
+    display: grid;
+    place-items: center;
   }
 
   li {
@@ -88,13 +95,16 @@ nav {
   a {
     text-decoration: none;
     font-family: $Mont;
-    font-size: 1.05rem;
+    font-size: 1.4rem;
     color: $text-invert;
   }
 }
 
+//Nav toggle
+
 .switch {
-  height: 7rem;
+  height: 9rem;
+  visibility: visible;
 }
 
 .bun-top.toggle {
