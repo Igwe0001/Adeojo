@@ -260,7 +260,6 @@ main {
 }
 
 .img {
-  outline: 1px solid red;
   width: 30rem;
   height: 30rem;
   margin-bottom: 2rem;
@@ -272,7 +271,6 @@ img {
 }
 
 .title {
-  outline: 1px solid blue;
   height: 5rem;
 }
 
