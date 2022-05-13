@@ -26,7 +26,6 @@ html {
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 /*
@@ -128,6 +127,11 @@ header h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 3.3rem;
   font-weight: 400;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+header h1:hover {
+  color: #FF4500;
 }
 
 nav {
@@ -156,12 +160,57 @@ nav li {
 nav a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.156rem;
   color: #fff;
+  text-transform: uppercase;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+nav a:hover {
+  color: #FF4500;
 }
 
+@media (min-width: 760px) {
+  header {
+    height: 15rem;
+  }
+  header .hamburger {
+    display: none;
+  }
+
+  nav {
+    position: initial;
+    height: 15%;
+    visibility: visible;
+    width: 30%;
+    background-color: #fff;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav a {
+    font-size: 1.4rem;
+    color: #000;
+  }
+}
 .switch {
-  height: 9rem;
+  height: 15rem;
+  visibility: visible;
+}
+
+a.toggle {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   visibility: visible;
 }
 
@@ -191,6 +240,40 @@ nav a {
   transition: -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}
+
+main {
+  width: 100%;
+}
+
+.main-section {
+  display: grid;
+  place-items: center;
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.img {
+  outline: 1px solid red;
+  width: 30rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  outline: 1px solid blue;
+  height: 5rem;
 }
 
 body {

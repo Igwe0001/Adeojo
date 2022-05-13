@@ -2,6 +2,7 @@
 @use "generalStyles" as *;
 @use "header" as *;
 @use "breakPoints" as *;
+@use "mainSection" as *;
 
 body {
   background-color: $Background-color;

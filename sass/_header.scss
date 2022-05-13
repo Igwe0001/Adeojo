@@ -61,6 +61,11 @@ header {
     font-family: $Mont;
     font-size: 3.3rem;
     font-weight: 400;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $nav-background;
+    }
   }
 }
 
@@ -73,10 +78,10 @@ nav {
   height: 0;
   visibility: hidden;
   background-color: $text-color;
-  transition: all .58s ease;
-  
+  transition: all 0.58s ease;
+
   .nav-container {
-    height: 100%
+    height: 100%;
   }
 
   ul {
@@ -95,15 +100,59 @@ nav {
   a {
     text-decoration: none;
     font-family: $Mont;
-    font-size: 1.4rem;
+    font-size: 1.156rem;
     color: $text-invert;
+    text-transform: uppercase;
+    visibility: hidden;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $nav-background;
+    }
+  }
+}
+
+//Header Media Queries
+
+@media (min-width: 760px) {
+  header {
+    height: 15rem;
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+  nav {
+    position: initial;
+    height: 15%;
+    visibility: visible;
+    width: 30%;
+    background-color: $text-invert;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    a {
+      font-size: 1.4rem;
+      color: $text-color;
+    }
   }
 }
 
 //Nav toggle
 
 .switch {
-  height: 9rem;
+  height: 15rem;
+  visibility: visible;
+}
+
+a.toggle {
+  transition: all .4s ease;
   visibility: visible;
 }
 
