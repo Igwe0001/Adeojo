@@ -7,6 +7,8 @@ header {
   position: relative;
   width: 100%;
   height: 9rem;
+  transition: height .2s ease;
+  z-index: 100;
 
   .header-container {
     // outline: 1px solid blue;
@@ -104,8 +106,7 @@ nav {
     color: $text-invert;
     text-transform: uppercase;
     visibility: hidden;
-
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 
     &:hover {
       color: $nav-background;
@@ -140,6 +141,7 @@ nav {
     a {
       font-size: 1.4rem;
       color: $text-color;
+      visibility: visible;
     }
   }
 }
@@ -172,4 +174,14 @@ a.toggle {
 .bun-crust-bottom.toggle {
   transform: none;
   transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}
+
+
+//Header sticky
+
+.sticky {
+  position: fixed;
+  background-color: $text-invert;
+  height: 7rem;
+  box-shadow: 0 4px 2px -2px $shadow-bottom
 }

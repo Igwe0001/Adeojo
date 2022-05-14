@@ -64,6 +64,9 @@ header {
   position: relative;
   width: 100%;
   height: 9rem;
+  -webkit-transition: height 0.2s ease;
+  transition: height 0.2s ease;
+  z-index: 100;
 }
 header .header-container {
   display: -webkit-box;
@@ -164,8 +167,8 @@ nav a {
   color: #fff;
   text-transform: uppercase;
   visibility: hidden;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 nav a:hover {
   color: #FF4500;
@@ -201,6 +204,7 @@ nav a:hover {
   nav a {
     font-size: 1.4rem;
     color: #000;
+    visibility: visible;
   }
 }
 .switch {
@@ -242,6 +246,14 @@ a.toggle {
   transition: transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.18s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
+.sticky {
+  position: fixed;
+  background-color: #fff;
+  height: 7rem;
+  -webkit-box-shadow: 0 4px 2px -2px #e1d3d3;
+          box-shadow: 0 4px 2px -2px #e1d3d3;
+}
+
 main {
   width: 100%;
 }
@@ -272,6 +284,38 @@ img {
 
 .title {
   height: 5rem;
+}
+
+footer {
+  height: 8rem;
+  display: grid;
+  place-items: center;
+}
+
+.socials {
+  width: 100%;
+}
+
+.socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials li {
+  margin: 0 0.8rem;
+}
+
+.socials i {
+  font-size: 3rem;
+  color: #000;
+  color: grey;
 }
 
 body {
