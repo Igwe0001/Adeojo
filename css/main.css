@@ -186,8 +186,8 @@ nav a:hover {
     position: initial;
     height: 15%;
     visibility: visible;
-    width: 30%;
-    background-color: #fff;
+    width: 20%;
+    background-color: inherit;
   }
   nav ul {
     display: -webkit-box;
@@ -256,6 +256,7 @@ a.toggle {
 
 main {
   width: 100%;
+  height: 100%;
 }
 
 .main-section {
@@ -271,12 +272,6 @@ main {
   height: 100%;
 }
 
-.img {
-  width: 30rem;
-  height: 30rem;
-  margin-bottom: 2rem;
-}
-
 img {
   width: 100%;
   height: 100%;
@@ -286,6 +281,67 @@ img {
   height: 5rem;
 }
 
+.about-main {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.about-img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+article {
+  margin-top: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article h1 {
+  font-size: 2.5rem;
+}
+
+article span {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  display: block;
+  color: #FF4500;
+}
+
+article p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 760px) {
+  main {
+    height: 100vh;
+  }
+
+  .about-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+
+  article {
+    width: 100%;
+    text-align: center;
+  }
+}
 footer {
   height: 8rem;
   display: grid;
