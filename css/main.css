@@ -266,19 +266,93 @@ a.toggle {
   margin: 0 auto;
   height: 100%;
 }
-
-img {
+.main-section .image {
   width: 100%;
-  height: 100%;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.main-section .img1 {
+  background-image: url("../ade/thumbs/img1.jpg");
+}
+.main-section .img2 {
+  background-image: url("../ade/thumbs/img2.jpg");
+}
+.main-section .img3 {
+  background-image: url("../ade/thumbs/img3.jpg");
+}
+.main-section .img4 {
+  background-image: url("../ade/thumbs/img4.jpg");
+}
+.main-section .img5 {
+  background-image: url("../ade/thumbs/img5.jpg");
+}
+.main-section .img6 {
+  background-image: url("../ade/thumbs/img6.jpg");
+}
+.main-section .img7 {
+  background-image: url("../ade/thumbs/img7.jpg");
+}
+.main-section .img8 {
+  background-image: url("../ade/thumbs/img8.jpg");
+}
+.main-section .img9 {
+  background-image: url("../ade/thumbs/img9.jpg");
+}
+.main-section .img10 {
+  background-image: url("../ade/thumbs/img10.jpg");
+}
+.main-section .img11 {
+  background-image: url("../ade/thumbs/img11.jpg");
+}
+.main-section .img12 {
+  background-image: url("../ade/thumbs/img12.jpg");
+}
+.main-section .img13 {
+  background-image: url("../ade/thumbs/img13.jpg");
+}
+.main-section .img14 {
+  background-image: url("../ade/thumbs/img14.jpg");
+}
+.main-section .img15 {
+  background-image: url("../ade/thumbs/img15.jpg");
+}
+.main-section .img16 {
+  background-image: url("../ade/thumbs/img16.jpg");
+}
+.main-section .img17 {
+  background-image: url("../ade/thumbs/img17.jpg");
+}
+.main-section .img18 {
+  background-image: url("../ade/thumbs/img18.jpg");
+}
+.main-section .img19 {
+  background-image: url("../ade/thumbs/img19.jpg");
+}
+.main-section .img20 {
+  background-image: url("../ade/thumbs/img20.jpg");
+}
+.main-section .img21 {
+  background-image: url("../ade/thumbs/img21.jpg");
+}
+.main-section .img22 {
+  background-image: url("../ade/thumbs/img22.jpg");
 }
 
 .title {
   height: 5rem;
+  width: 100%;
   text-align: center;
   padding-top: 0.7rem;
+  margin-top: 30rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+}
+.title a {
+  text-decoration: none;
+  color: #000;
 }
 
 .about-main {
@@ -381,4 +455,28 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
+}
+
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+}
+.img-window img {
+  max-height: 80vh;
+  max-width: 80vw;
 }

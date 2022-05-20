@@ -8,11 +8,13 @@ const bunCrust = document.querySelectorAll('.bun-crust')
 const link = document.querySelectorAll('.link');
 const header = document.querySelector('header');
 const main = document.querySelector('main')
-const imgtargets = document.querySelectorAll(".image");  
-
+// const imgtargets = document.querySelectorAll(".image");  
+const gallary = document.querySelectorAll('.image')
+let latestOpenImg;
+let windowWidth = window.innerWidth
 
 const headerHeight = header.getBoundingClientRect().height
-console.log(main);
+// console.log(main);
 
 
 //Navigation Control
@@ -78,6 +80,34 @@ window.addEventListener('scroll', () => {
 //Lazy Loading Images
 
 
+//Image viwer
+
+if (gallary) {
+    gallary.forEach(function(image, index) {
+        image.addEventListener('click', () => {
+            let getElementCss = window.getComputedStyle(image)
+            let getFullImageurl = getElementCss.getPropertyValue("background-image");
+            let getimgUrlPos = getFullImageurl.split("/ade/thumbs/")
+            let setNewImage = getimgUrlPos[1].replace('")', '');
+
+            latestOpenImg = index + 1;
+
+            let container = document.body;
+            let newImageWindow = document.createElement("div")
+            container.appendChild(newImageWindow)
+            newImageWindow.setAttribute("class", "img-window");
+            newImageWindow.setAttribute("onclick", "closeImg()");
+
+            let newImg = document.createElement("img");
+            newImageWindow.appendChild(newImg)
+            newImg.setAttribute("src", "ade/" + setNewImage)
+        })
+    })
+}
+
+function closeImg() {
+    document.querySelector('.img-window').remove()
+}
 
 
 
