@@ -460,7 +460,7 @@ body {
 .img-window {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.98);
   position: fixed;
   top: 0;
   left: 0;
@@ -479,4 +479,30 @@ body {
 .img-window img {
   max-height: 80vh;
   max-width: 80vw;
+}
+
+.img-btn-next,
+.img-btn-prev {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #111111;
+  position: fixed;
+  top: 80vh;
+  z-index: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.img-btn-next:hover,
+.img-btn-prev:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 760px) {
+  .img-btn-next,
+.img-btn-prev {
+    top: 48vh;
+  }
 }
