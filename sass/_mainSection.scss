@@ -17,6 +17,7 @@
   grid-row-gap: 6rem;
   margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin-bottom: 3rem;
   @include general;
 
   .image {
@@ -26,6 +27,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    cursor: pointer;
+
+    &:hover {
+    transition: all 0.2s ease;
+      transform: scale(1.2);
+    }
   }
 
   .img1 {

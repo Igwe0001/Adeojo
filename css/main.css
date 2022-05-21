@@ -261,6 +261,7 @@ a.toggle {
   grid-row-gap: 6rem;
   margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin-bottom: 3rem;
   width: 95%;
   max-width: 1000px;
   margin: 0 auto;
@@ -272,6 +273,13 @@ a.toggle {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  cursor: pointer;
+}
+.main-section .image:hover {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .main-section .img1 {
   background-image: url("../ade/thumbs/img1.jpg");
@@ -504,5 +512,44 @@ body {
   .img-btn-next,
 .img-btn-prev {
     top: 48vh;
+  }
+}
+#spinner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #000;
+}
+
+.spinner {
+  border: 1.6rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1.6rem solid #FF4500;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }

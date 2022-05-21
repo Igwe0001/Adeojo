@@ -16,7 +16,11 @@ $transparency: rgba(0, 0, 0, 0.98);
 $Mont: 'Montserrat', sans-serif;
 $Arial: Arial, Helvetica, sans-serif;
 
-
+@media (prefers-color-scheme: dark) {
+    $Background-color: #000;
+    $text-color: #fff;
+    $text-invert: #000;
+}
 
 
 
