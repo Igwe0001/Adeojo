@@ -168,7 +168,7 @@ function changeImg(changeDir) {
 
 // Page loader
 
-document.onreadystatechange = function () {
+document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
     document.querySelector("body").style.visibility = "hidden";
     document.querySelector("#spinner").style.visibility = "visible";
