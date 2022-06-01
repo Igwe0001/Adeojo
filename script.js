@@ -30,9 +30,6 @@ hamburger.addEventListener("click", () => {
   });
 });
 
-// link.addEventListener("click", () => {
-//       nav.classList.remove("switch");
-// })
 
 link.forEach((e) => {
   e.addEventListener('click', () => {
